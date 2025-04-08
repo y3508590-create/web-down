@@ -1,23 +1,23 @@
 # Web Down
 
-Web Down is a script designed to simplify the creation of website downloaders. With this script, you can quickly build a website downloader without starting from scratch.
+Web Down adalah script yang berfungsi untuk memudahkan kalian dalam membuat situs website downloader. Dengan kehadiran script ini, kalian bisa membuat website downloader dengan cepat tanpa perlu membuat dari awal.
 
-## 🚀 Preview
-![Preview Image](path/to/preview/image)
+## 🚀 Pratinjau
+![Gambar Pratinjau](https://raw.githubusercontent.com/Xvannn07/web-down/refs/heads/main/gambar/Screenshot%202025-04-08%20140457.png)
 
-## ⚙️ Installation
+## ⚙️ Instalasi
 ```bash
 npm install
 npm start
 ```
 
-## 📖 Usage Guide
-To add new social media platform downloader features, follow these steps:
+## 📖 Panduan Penggunaan
+Jika kalian ingin menambahkan fitur platform downloader media sosial lainnya, ikuti langkah-langkah berikut:
 
-### 1. Adding New Downloader
-You can utilize the downloader API from https://elsty.xyz/documentation
+### 1. Tahap Penambahan
+Kalian bisa memanfaatkan fitur downloader dari API https://elsty.xyz/documentation
 
-Navigate to `/src/scraper/fitur` and create a code like this:
+Pergi ke `/src/scraper/fitur` dan buat kode seperti ini:
 
 ```javascript
 const axios = require("axios");
@@ -79,28 +79,28 @@ class ElstyDownloader {
 module.exports = ElstyDownloader;
 ```
 
-### 2. Integration Steps
-Go to `src/scraper/index.js` and:
-- Import your feature function:
+### 2. Tahap Integrasi
+Pergi ke `src/scraper/index.js` dan:
+- Import fungsi fitur:
 ```javascript
 const FiturDownloader = require("./fitur.js")
 ```
-- Integrate it in the index downloader (around line 19):
+- Integrasikan ke index downloader (sekitar baris 19):
 ```javascript
-Fitur: FiturDownloader // call feature function
+Fitur: FiturDownloader // panggil fungsi fitur
 ```
 
-### 3. Adding Link Regex
-Navigate to `src/system/patterns.js` and add the regex pattern for your social media platform:
+### 3. Tahap Penambahan Regex Link
+Pergi ke `src/system/patterns.js` dan tambahkan pola regex untuk platform media sosial:
 ```javascript
 fitur: /https://social.xyz/i
 ```
 
-### 4. Adding Platform Data
-- Go to `public` directory
-- Import your platform icon to `img/icon` directory
-- Upload your `icon.png` file
-- Navigate to `data/platforms.json` and add your platform data:
+### 4. Tahap Penambahan Data Platform
+- Pergi ke direktori `public`
+- Import ikon platform ke direktori `img/icon`
+- Upload file `icon.png`
+- Pergi ke `data/platforms.json` dan tambahkan data platform:
 ```json
 {
   "index": 5,
@@ -109,9 +109,6 @@ fitur: /https://social.xyz/i
 }
 ```
 
-## 👥 Contributors
-- [xvannn](https://github.com/xvannn07) - Project Creator
-- [Fika bauk](https://github.com/apalah) - API Provider
-
-## 📝 License
-MIT License
+## 👥 Kontributor
+- [xvannn](https://github.com/xvannn07) - Pembuat Proyek
+- [Fika bauk](https://github.com/firllyfikaa) - Penyedia API
