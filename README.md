@@ -1,24 +1,117 @@
-# Introduction
+# Web Down
 
-Template for Node.js "Hello World!" project.
+Web Down is a script designed to simplify the creation of website downloaders. With this script, you can quickly build a website downloader without starting from scratch.
 
-# Get started
+## 🚀 Preview
+![Preview Image](path/to/preview/image)
 
-- Click the **Run** button to run the program.
-  ![Run](https://lf-cdn.marscode.com/obj/eden-sg/ljhwz_lkpkbvsj/ljhwZthlaukjlkulzlp/project_template/prod/17230fef56b045aa48b889b2781899227bde119f/images/native_nodejs/run.png)
-- Go to **Networking** adn preview the page at **port:3000**
-  ![Run](https://lf-cdn.marscode.com/obj/eden-sg/ljhwz_lkpkbvsj/ljhwZthlaukjlkulzlp/project_template/prod/17230fef56b045aa48b889b2781899227bde119f/images/native_nodejs/cloud_port.png)
-- Got to **Preview** and watch it.
-  ![Preview](https://lf-cdn.marscode.com/obj/eden-sg/ljhwz_lkpkbvsj/ljhwZthlaukjlkulzlp/project_template/prod/17230fef56b045aa48b889b2781899227bde119f/images/native_nodejs/preview.png)
+## ⚙️ Installation
+```bash
+npm install
+npm start
+```
 
-By default, MarsCode provide you with a default running configuration, you can modify it in the **.vscode/launch.json**. Refer to [Visual Studio Code's doc](https://code.visualstudio.com/docs/editor/debugging) for how to configure launch.json.
+## 📖 Usage Guide
+To add new social media platform downloader features, follow these steps:
 
-# Learn more
+### 1. Adding New Downloader
+You can utilize the downloader API from https://elsty.xyz/documentation
 
-To learn more about Node.js, refer to the following resources:
+Navigate to `/src/scraper/fitur` and create a code like this:
 
-- [introduction-to-nodejs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) - learn about Node.js features.
+```javascript
+const axios = require("axios");
 
-# Help
+class ElstyDownloader {
+  constructor(url) {
+    this.url = url;
+  }
 
-If you need help, you might be able to find an answer in our [docs](https://docs.marscode.com/). Feel free to report bugs and give us feedback [here](https://discord.gg/qtVMXEDbRw).
+  async download() {
+    try {
+      const response = await callAPI(
+        "elsty",
+        "/api/download/social",
+        "GET",
+        {
+          query: {
+            url: this.url,
+          },
+          useApiKey: false,
+        }
+      );
+      
+      if (response.success) {
+        if(response.data.images.length > 0 && !response.data.videos.length > 0) {
+          return {
+            status: "success",
+            slide: true,
+            video: false,
+            table: false,
+            data: {
+              title: response.data.title,
+              download: response.data.images.map((v) => {
+                return { ext: "png", url: v.url };
+              }),
+            }
+          };
+        } else if(response.data.videos.length > 0) {
+          return {
+            status: "success",
+            slide: true,
+            video: false,
+            table: false,
+            data: {
+              title: response.data.title,
+              download: response.data.videos.map((v) => {
+                return { ext: "mp4", url: v.url };
+              }),
+            }
+          };
+        }
+      }
+    } catch(error) {
+      console.error(error);
+      throw new Error('Failed to download from Instagram: ' + error.message);
+    }
+  }
+}
+module.exports = ElstyDownloader;
+```
+
+### 2. Integration Steps
+Go to `src/scraper/index.js` and:
+- Import your feature function:
+```javascript
+const FiturDownloader = require("./fitur.js")
+```
+- Integrate it in the index downloader (around line 19):
+```javascript
+Fitur: FiturDownloader // call feature function
+```
+
+### 3. Adding Link Regex
+Navigate to `src/system/patterns.js` and add the regex pattern for your social media platform:
+```javascript
+fitur: /https://social.xyz/i
+```
+
+### 4. Adding Platform Data
+- Go to `public` directory
+- Import your platform icon to `img/icon` directory
+- Upload your `icon.png` file
+- Navigate to `data/platforms.json` and add your platform data:
+```json
+{
+  "index": 5,
+  "name": "Fitur",
+  "icon": "/img/icons/fitur.png"
+}
+```
+
+## 👥 Contributors
+- [xvannn](https://github.com/xvannn07) - Project Creator
+- [Fika bauk](https://github.com/apalah) - API Provider
+
+## 📝 License
+MIT License
