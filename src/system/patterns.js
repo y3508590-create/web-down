@@ -11,7 +11,8 @@ const platformPatterns = {
     instagram: /(?:https?:\/\/)?(?:www\.|m\.)?instagram\.com(?:\/.*)?/i,
     youtube: /(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?/i,
     terabox: /(?:https?:\/\/)?(?:www\.|m\.)?(?:terabox\.com|teraboxapp\.com)(?:\/.*)?/i,
-    snackvideo: /(?:https?:\/\/)?(?:www\.|m\.)?snackvideo\.com(?:\/.*)?/i
+    snackvideo: /(?:https?:\/\/)?(?:www\.|m\.)?snackvideo\.com(?:\/.*)?/i,
+    pinterest: /https?:\/\/id\.pinterest\.com\/pin\/\d+\/?/i
 };
 
 module.exports = platformPatterns;
