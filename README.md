@@ -3,6 +3,7 @@
 Web Down adalah script yang berfungsi untuk memudahkan kalian dalam membuat situs website downloader. Dengan kehadiran script ini, kalian bisa membuat website downloader dengan cepat tanpa perlu membuat dari awal.
 
 ## 🚀 Pratinjau
+[Demo](https://webdl.xvannn.xyz)
 ![Gambar Pratinjau](https://raw.githubusercontent.com/Xvannn07/web-down/refs/heads/main/gambar/Screenshot%202025-04-08%20140457.png)
 
 ## ⚙️ Instalasi
