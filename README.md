@@ -111,5 +111,8 @@ fitur: /https://social.xyz/i
 ```
 
 ## 👥 Kontributor
-- [xvannn](https://github.com/xvannn07) - Pembuat Proyek
-- [Fika bauk](https://github.com/firllyfikaa) - Penyedia API
+[![Xvannn07](https://github.com/Xvannn07.png?size=100)](https://github.com/Xvannn07) | [![Fika Bauk](https://github.com/firllyfikaa.png?size=100)](https://github.com/firllyfikaa) | <a href="https://elsty.xyz"><img src="https://github.com/Elsty-Api.png?size=100" width="100" hegiht="100"/></a>
+----|----|----|----
+[Xvannn07](https://github.com/Xvannn07) | [Fika Bauk](https://github.com/firllyfikaa) | [Elsty API](https://elsty.xyz)
+Author / Pembuat | Penyedia API elsty | Elsty API Downloader
+
