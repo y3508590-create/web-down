@@ -267,7 +267,7 @@ function toggleMenu() {
                               </td>
                               <td class="p-2">
                                 <a href="${element.url}" target="_blank">
-                                  <button class="bg-green-500 text-gray-400 px-4 py-2 rounded flex items-center">
+                                  <button class="bg-green-500 text-gray-800 px-4 py-2 rounded flex items-center">
                                       <i class="fas fa-download mr-2"></i>Download
                                   </button>
                                 </a>
@@ -323,7 +323,7 @@ function toggleMenu() {
                               </td>
                               <td class="p-2">
                                 <a href="${element.url}" target="_blank">
-                                  <button class="bg-green-500 text-gray-400 px-4 py-2 rounded flex items-center">
+                                  <button class="bg-green-500 text-gray-800 px-4 py-2 rounded flex items-center">
                                       <i class="fas fa-download mr-2"></i>Download
                                   </button>
                                 </a>
@@ -385,4 +385,4 @@ function toggleMenu() {
     return Array.from(new Uint8Array(signature))
       .map(b => b.toString(16).padStart(2, "0"))
       .join("");
-  }
+}
