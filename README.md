@@ -114,8 +114,20 @@ fitur: /https://social.xyz/i
 
 ---------
 
-[![Xvannn07](https://github.com/Xvannn07.png?size=100)](https://github.com/Xvannn07) | [![Fika Bauk](https://github.com/firllyfikaa.png?size=100)](https://github.com/firllyfikaa) | <a href="https://elsty.xyz"><img src="https://github.com/Elsty-Api.png?size=100" width="100" hegiht="100"/></a>
-|----|----|----|----
-[Xvannn07](https://github.com/Xvannn07) | [Fika Bauk](https://github.com/firllyfikaa) | [Elsty API](https://elsty.xyz)
-Author / Pembuat | Penyedia API elsty | Elsty API Downloader
-
+<table>
+  <tr>
+    <td><a href="https://github.com/Xvannn07"><img src="https://github.com/Xvannn07.png?size=100" width="100" height="100"/></a></td>
+    <td><a href="https://github.com/firllyfikaa"><img src="https://github.com/firllyfikaa.png?size=100" width="100" height="100"/></a></td>
+    <td><a href="https://elsty.xyz"><img src="https://github.com/Elsty-Api.png?size=100" width="100" height="100"/></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/Xvannn07">Xvannn07</a></td>
+    <td><a href="https://github.com/firllyfikaa">Fika Bauk</a></td>
+    <td><a href="https://elsty.xyz">Elsty API</a></td>
+  </tr>
+  <tr>
+    <td>Author / Pembuat</td>
+    <td>Penyedia API elsty</td>
+    <td>Elsty API Downloader</td>
+  </tr>
+</table>
