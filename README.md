@@ -16,7 +16,7 @@ npm start
 Jika kalian ingin menambahkan fitur platform downloader media sosial lainnya, ikuti langkah-langkah berikut:
 
 ### 1. Tahap Penambahan
-Kalian bisa memanfaatkan fitur downloader dari API https://elsty.xyz/documentation
+Kalian bisa memanfaatkan fitur downloader dari platfrom Rest API [Elsty](https://elsty.xyz/endpoint/downloads)
 
 Pergi ke `/src/scraper/fitur` dan buat kode seperti ini:
 
