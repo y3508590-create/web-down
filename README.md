@@ -47,7 +47,7 @@ class ElstyDownloader {
           return {
             status: "success",
             slide: true,
-            video: false,
+            video: false, 
             table: false,
             data: {
               title: response.data.title,
@@ -79,7 +79,17 @@ class ElstyDownloader {
 }
 module.exports = ElstyDownloader;
 ```
+Dalam contoh kode di atas ada variabel data 
+```javascript
+slide: boolean
+// menggunakan format slide untuk menampilkan beberapa output gambar.
 
+video: boolean
+// menggunakan format video untuk untuk menampilkan output berupa 1 video.
+
+table: boolean
+// menggunakan format table untuk menampilkan output tabel format, size file, dan link download.
+```
 ### 2. Tahap Integrasi
 Pergi ke `src/scraper/index.js` dan:
 - Import fungsi fitur:
