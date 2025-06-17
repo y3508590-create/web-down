@@ -10,7 +10,7 @@ const APIs = {
 };
 
 const APIKeys = {
-    'https://elsty.xyz': null,
+    'https://elsty.xyz': 'APIKEY MU',
 };
 
 const callAPI = async (name, path = '/', method = 'GET', options = {}) => {
