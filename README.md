@@ -31,17 +31,18 @@ class ElstyDownloader {
   async download() {
     try {
       const response = await callAPI(
-        "elsty",
-        "/api/download/social",
-        "GET",
+        "elsty", // Provider API
+        "/api/download/social", // Path
+        "GET", // Method
         {
           query: {
             url: this.url,
-          },
-          useApiKey: false,
+          }, // Query
+          useApiKey: false, // Useapikey: Boolean
         }
       );
-      
+
+      // Response Result
       if (response.success) {
         if(response.data.images.length > 0 && !response.data.videos.length > 0) {
           return {
